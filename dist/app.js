@@ -1,5 +1,5 @@
 // Dán URL Web App Google Apps Script (đuôi /exec) vào đây.
-const URLscript = '';
+const URLscript = 'https://script.google.com/macros/s/AKfycbz93Qui7gLMjYwA6vEFj0GH7iUwys_WoKrK7Lrqkjl2qI1Eq0N87dJ9_bWe9rZoi_IM/exec';
 let isSubmitting = false;
 
 const products = [
