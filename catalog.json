@@ -1,0 +1,310 @@
+[
+  {
+    "id": 0,
+    "brand": "Chanel",
+    "name": "Bleu de Chanel EDP Mini",
+    "gender": "male",
+    "price": 780000,
+    "maxPrice": 780000,
+    "volume": "10ml",
+    "image": "assets/bleu-de-chanel.webp",
+    "images": [
+      "assets/bleu-de-chanel.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 780000,
+        "comboPrice": 1560000,
+        "volume": "10ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "brand": "Chanel",
+    "name": "Chance EDP Mini",
+    "gender": "female",
+    "price": 478000,
+    "maxPrice": 478000,
+    "volume": "7.5ml",
+    "image": "assets/chance.webp",
+    "images": [
+      "assets/chance.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 478000,
+        "comboPrice": 956000,
+        "volume": "7.5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "brand": "Chanel",
+    "name": "Coco Mademoiselle EDP Mini",
+    "gender": "female",
+    "price": 380000,
+    "maxPrice": 380000,
+    "volume": "7.5ml",
+    "image": "assets/coco-mademoiselle.webp",
+    "images": [
+      "assets/coco-mademoiselle.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 380000,
+        "comboPrice": 760000,
+        "volume": "7.5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "brand": "Chanel",
+    "name": "N°5 EDP Mini",
+    "gender": "female",
+    "price": 380000,
+    "maxPrice": 380000,
+    "volume": "7.5ml",
+    "image": "assets/chanel-no5.webp",
+    "images": [
+      "assets/chanel-no5.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 380000,
+        "comboPrice": 760000,
+        "volume": "7.5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "brand": "Dior",
+    "name": "J’adore EDP Mini",
+    "gender": "female",
+    "price": 478000,
+    "maxPrice": 478000,
+    "volume": "5ml",
+    "image": "assets/jadore.webp",
+    "images": [
+      "assets/jadore.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 478000,
+        "comboPrice": 956000,
+        "volume": "5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "brand": "Dior",
+    "name": "Miss Dior EDP Mini",
+    "gender": "female",
+    "price": 398000,
+    "maxPrice": 398000,
+    "volume": "5ml",
+    "image": "assets/miss-dior.webp",
+    "images": [
+      "assets/miss-dior.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 398000,
+        "comboPrice": 796000,
+        "volume": "5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "brand": "Dior",
+    "name": "Sauvage EDP Mini",
+    "gender": "male",
+    "price": 580000,
+    "maxPrice": 580000,
+    "volume": "10ml",
+    "image": "assets/sauvage.webp",
+    "images": [
+      "assets/sauvage.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 580000,
+        "comboPrice": 1160000,
+        "volume": "10ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "brand": "Giorgio Armani",
+    "name": "My Way EDP Mini",
+    "gender": "female",
+    "price": 480000,
+    "maxPrice": 480000,
+    "volume": "7ml",
+    "image": "assets/my-way.webp",
+    "images": [
+      "assets/my-way.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 480000,
+        "comboPrice": 960000,
+        "volume": "7ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "brand": "Gucci",
+    "name": "Bloom Acqua di Fiori EDP Mini",
+    "gender": "female",
+    "price": 398000,
+    "maxPrice": 398000,
+    "volume": "5ml",
+    "image": "assets/bloom-acqua.webp",
+    "images": [
+      "assets/bloom-acqua.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 398000,
+        "comboPrice": 796000,
+        "volume": "5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "brand": "Gucci",
+    "name": "Bloom EDP Mini",
+    "gender": "female",
+    "price": 388000,
+    "maxPrice": 388000,
+    "volume": "5ml",
+    "image": "assets/bloom.webp",
+    "images": [
+      "assets/bloom.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 388000,
+        "comboPrice": 776000,
+        "volume": "5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "brand": "Gucci",
+    "name": "Flora Gorgeous Jasmine EDP Mini",
+    "gender": "female",
+    "price": 550000,
+    "maxPrice": 550000,
+    "volume": "5ml",
+    "image": "assets/flora-jasmine.webp",
+    "images": [
+      "assets/flora-jasmine.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 550000,
+        "comboPrice": 1100000,
+        "volume": "5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "brand": "Chanel",
+    "name": "Coco Noir EDP Mini",
+    "gender": "female",
+    "price": 580000,
+    "maxPrice": 580000,
+    "volume": "7.5ml",
+    "image": "assets/coco-noir.webp",
+    "images": [
+      "assets/coco-noir.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 580000,
+        "comboPrice": 1160000,
+        "volume": "7.5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "brand": "Versace",
+    "name": "Bright Crystal EDT Mini",
+    "gender": "female",
+    "price": 298000,
+    "maxPrice": 298000,
+    "volume": "5ml",
+    "image": "assets/bright-crystal.webp",
+    "images": [
+      "assets/bright-crystal.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 298000,
+        "comboPrice": 596000,
+        "volume": "5ml",
+        "saleType": "mini"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "brand": "Yves Saint Laurent",
+    "name": "Libre EDP Mini",
+    "gender": "female",
+    "price": 478000,
+    "maxPrice": 478000,
+    "volume": "7.5ml",
+    "image": "assets/libre.webp",
+    "images": [
+      "assets/libre.webp"
+    ],
+    "inStock": true,
+    "variants": [
+      {
+        "price": 478000,
+        "comboPrice": 956000,
+        "volume": "7.5ml",
+        "saleType": "mini"
+      }
+    ]
+  }
+]
