@@ -4,7 +4,46 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>T&T Store — Dấu hương của riêng bạn</title>
-<meta
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+
+      // THAY ID CỦA BẠN VÀO ĐÂY
+      fbq("init", "964930469748940");
+
+      fbq("track", "PageView");
+      fbq("track", "ViewContent");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=964930469748940&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <meta
       name="description"
       content="Khám phá bộ sưu tập nước hoa tại T&T Store. Tìm mùi hương dành riêng cho bạn."
     />
@@ -16,16 +55,32 @@
     <header>
       <a class="logo" href="#">T&amp;T<span>STORE · NƯỚC HOA MINI</span></a>
       <nav aria-label="Điều hướng chính">
-        <a href="#collection">Bộ sưu tập</a
-        ><a href="#story">Về T&T Store</a
+        <a href="#collection">Bộ sưu tập</a><a href="#story">Về T&T Store</a
         ><a href="#guide">Chọn mùi hương</a>
       </nav>
       <a class="header-buy" href="#collection">Chọn mua ↗</a>
     </header>
     <main>
       <section class="mini-hero">
-        <div class="mini-hero-copy"><div class="eyebrow">T&T STORE · THE MINI COLLECTION</div><h1>Hương thơm tinh tế.<br><em>Trong từng chai nhỏ.</em></h1><p>Khám phá bộ sưu tập nước hoa mini từ 5–10ml.<br>Nhỏ gọn để mang theo, tinh tế để trao tặng.</p><a class="button" href="#collection">Khám phá bộ sưu tập ↗</a><div class="hero-caption">AUTHENTIC FRAGRANCE FOR A BETTER YOU</div></div>
-        <div class="mini-hero-logo"><img src="assets/tt-store-logo.webp" alt="T&T Store — Nước hoa Authentic" width="960" height="960" fetchpriority="high"><span>TINH TẾ · NHỎ GỌN · DẤU ẤN RIÊNG</span></div>
+        <div class="mini-hero-copy">
+          <div class="eyebrow">T&T STORE · THE MINI COLLECTION</div>
+          <h1>Hương thơm tinh tế.<br /><em>Trong từng chai nhỏ.</em></h1>
+          <p>
+            Khám phá bộ sưu tập nước hoa mini từ 5–10ml.<br />Nhỏ gọn để mang
+            theo, tinh tế để trao tặng.
+          </p>
+          <a class="button" href="#collection">Khám phá bộ sưu tập ↗</a>
+          <div class="hero-caption">AUTHENTIC FRAGRANCE FOR A BETTER YOU</div>
+        </div>
+        <div class="mini-hero-logo">
+          <img
+            src="assets/tt-store-logo.webp"
+            alt="T&T Store — Nước hoa Authentic"
+            width="960"
+            height="960"
+            fetchpriority="high"
+          /><span>TINH TẾ · NHỎ GỌN · DẤU ẤN RIÊNG</span>
+        </div>
       </section>
       <!-- <div class="benefits">
         <span>◇ <b>Tuyển chọn mùi hương</b></span
@@ -44,8 +99,7 @@
           <div class="filters" role="group" aria-label="Lọc theo giới tính">
             <button class="active" data-filter="all">Tất cả</button
             ><button data-filter="female">Nước hoa nữ</button
-            ><button data-filter="male">Nước hoa nam</button
-            >
+            ><button data-filter="male">Nước hoa nam</button>
           </div>
           <div class="tools">
             <label class="search"
@@ -63,7 +117,8 @@
           </div>
         </div>
         <div class="results">
-          <span id="result-count"></span><span>14 MẪU MINI · DUNG TÍCH 5–10ML</span>
+          <span id="result-count"></span
+          ><span>14 MẪU MINI · DUNG TÍCH 5–10ML</span>
         </div>
         <div class="grid" id="products"></div>
         <div class="more-wrap">
@@ -126,7 +181,18 @@
         <button type="button" class="close" aria-label="Đóng">×</button>
       </div>
       <div class="purchase-product">
-        <div class="purchase-photos"><img id="purchase-image" src="assets/bleu-de-chanel.webp" alt="" /><img id="purchase-image-second" hidden src="assets/bleu-de-chanel.webp" alt="" /></div>
+        <div class="purchase-photos">
+          <img
+            id="purchase-image"
+            src="assets/bleu-de-chanel.webp"
+            alt=""
+          /><img
+            id="purchase-image-second"
+            hidden
+            src="assets/bleu-de-chanel.webp"
+            alt=""
+          />
+        </div>
         <div>
           <div class="eyebrow" id="purchase-brand"></div>
           <h3 id="purchase-name"></h3>
@@ -136,7 +202,12 @@
       <form id="purchase-form">
         <div class="size-heading" hidden>Chọn thể tích</div>
         <div id="purchase-sizes"></div>
-        <div id="purchase-offer" class="purchase-offer" role="group" aria-label="Chọn số lượng ưu đãi"></div>
+        <div
+          id="purchase-offer"
+          class="purchase-offer"
+          role="group"
+          aria-label="Chọn số lượng ưu đãi"
+        ></div>
         <label for="buyer-name">Họ và tên <span>*</span></label>
         <input
           id="buyer-name"
