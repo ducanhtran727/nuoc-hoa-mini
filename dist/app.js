@@ -8,8 +8,8 @@ const products = [
     "brand": "Chanel",
     "name": "Bleu de Chanel EDP Mini",
     "gender": "male",
-    "price": 780000,
-    "maxPrice": 780000,
+    "price": 269000,
+    "maxPrice": 269000,
     "volume": "10ml",
     "image": "assets/bleu-de-chanel.webp",
     "images": [
@@ -18,8 +18,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 780000,
-        "comboPrice": 1560000,
+        "price": 269000,
+        "comboPrice": 538000,
         "volume": "10ml",
         "saleType": "mini"
       }
@@ -30,8 +30,8 @@ const products = [
     "brand": "Chanel",
     "name": "Chance EDP Mini",
     "gender": "female",
-    "price": 478000,
-    "maxPrice": 478000,
+    "price": 278000,
+    "maxPrice": 278000,
     "volume": "7.5ml",
     "image": "assets/chance.webp",
     "images": [
@@ -40,8 +40,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 478000,
-        "comboPrice": 956000,
+        "price": 278000,
+        "comboPrice": 556000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
@@ -52,8 +52,8 @@ const products = [
     "brand": "Chanel",
     "name": "Coco Mademoiselle EDP Mini",
     "gender": "female",
-    "price": 380000,
-    "maxPrice": 380000,
+    "price": 260000,
+    "maxPrice": 260000,
     "volume": "7.5ml",
     "image": "assets/coco-mademoiselle.webp",
     "images": [
@@ -62,8 +62,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 380000,
-        "comboPrice": 760000,
+        "price": 260000,
+        "comboPrice": 520000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
@@ -74,8 +74,8 @@ const products = [
     "brand": "Chanel",
     "name": "N°5 EDP Mini",
     "gender": "female",
-    "price": 380000,
-    "maxPrice": 380000,
+    "price": 240000,
+    "maxPrice": 240000,
     "volume": "7.5ml",
     "image": "assets/chanel-no5.webp",
     "images": [
@@ -84,8 +84,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 380000,
-        "comboPrice": 760000,
+        "price": 240000,
+        "comboPrice": 480000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
@@ -96,8 +96,8 @@ const products = [
     "brand": "Dior",
     "name": "J’adore EDP Mini",
     "gender": "female",
-    "price": 478000,
-    "maxPrice": 478000,
+    "price": 279000,
+    "maxPrice": 279000,
     "volume": "5ml",
     "image": "assets/jadore.webp",
     "images": [
@@ -106,8 +106,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 478000,
-        "comboPrice": 956000,
+        "price": 279000,
+        "comboPrice": 558000,
         "volume": "5ml",
         "saleType": "mini"
       }
@@ -118,8 +118,8 @@ const products = [
     "brand": "Dior",
     "name": "Miss Dior EDP Mini",
     "gender": "female",
-    "price": 398000,
-    "maxPrice": 398000,
+    "price": 265000,
+    "maxPrice": 265000,
     "volume": "5ml",
     "image": "assets/miss-dior.webp",
     "images": [
@@ -128,8 +128,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 398000,
-        "comboPrice": 796000,
+        "price": 265000,
+        "comboPrice": 530000,
         "volume": "5ml",
         "saleType": "mini"
       }
@@ -140,8 +140,8 @@ const products = [
     "brand": "Dior",
     "name": "Sauvage EDP Mini",
     "gender": "male",
-    "price": 580000,
-    "maxPrice": 580000,
+    "price": 259000,
+    "maxPrice": 259000,
     "volume": "10ml",
     "image": "assets/sauvage.webp",
     "images": [
@@ -150,8 +150,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 580000,
-        "comboPrice": 1160000,
+        "price": 259000,
+        "comboPrice": 518000,
         "volume": "10ml",
         "saleType": "mini"
       }
@@ -162,8 +162,8 @@ const products = [
     "brand": "Giorgio Armani",
     "name": "My Way EDP Mini",
     "gender": "female",
-    "price": 480000,
-    "maxPrice": 480000,
+    "price": 240000,
+    "maxPrice": 240000,
     "volume": "7ml",
     "image": "assets/my-way.webp",
     "images": [
@@ -172,8 +172,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 480000,
-        "comboPrice": 960000,
+        "price": 240000,
+        "comboPrice": 480000,
         "volume": "7ml",
         "saleType": "mini"
       }
@@ -184,8 +184,8 @@ const products = [
     "brand": "Gucci",
     "name": "Bloom Acqua di Fiori EDP Mini",
     "gender": "female",
-    "price": 398000,
-    "maxPrice": 398000,
+    "price": 239000,
+    "maxPrice": 239000,
     "volume": "5ml",
     "image": "assets/bloom-acqua.webp",
     "images": [
@@ -194,8 +194,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 398000,
-        "comboPrice": 796000,
+        "price": 239000,
+        "comboPrice": 478000,
         "volume": "5ml",
         "saleType": "mini"
       }
@@ -206,8 +206,8 @@ const products = [
     "brand": "Gucci",
     "name": "Bloom EDP Mini",
     "gender": "female",
-    "price": 388000,
-    "maxPrice": 388000,
+    "price": 239000,
+    "maxPrice": 239000,
     "volume": "5ml",
     "image": "assets/bloom.webp",
     "images": [
@@ -216,8 +216,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 388000,
-        "comboPrice": 776000,
+        "price": 239000,
+        "comboPrice": 478000,
         "volume": "5ml",
         "saleType": "mini"
       }
@@ -228,8 +228,8 @@ const products = [
     "brand": "Gucci",
     "name": "Flora Gorgeous Jasmine EDP Mini",
     "gender": "female",
-    "price": 550000,
-    "maxPrice": 550000,
+    "price": 269000,
+    "maxPrice": 269000,
     "volume": "5ml",
     "image": "assets/flora-jasmine.webp",
     "images": [
@@ -238,8 +238,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 550000,
-        "comboPrice": 1100000,
+        "price": 269000,
+        "comboPrice": 538000,
         "volume": "5ml",
         "saleType": "mini"
       }
@@ -250,8 +250,8 @@ const products = [
     "brand": "Chanel",
     "name": "Coco Noir EDP Mini",
     "gender": "female",
-    "price": 580000,
-    "maxPrice": 580000,
+    "price": 240000,
+    "maxPrice": 240000,
     "volume": "7.5ml",
     "image": "assets/coco-noir.webp",
     "images": [
@@ -260,8 +260,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 580000,
-        "comboPrice": 1160000,
+        "price": 240000,
+        "comboPrice": 480000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
@@ -272,8 +272,8 @@ const products = [
     "brand": "Versace",
     "name": "Bright Crystal EDT Mini",
     "gender": "female",
-    "price": 298000,
-    "maxPrice": 298000,
+    "price": 199000,
+    "maxPrice": 199000,
     "volume": "5ml",
     "image": "assets/bright-crystal.webp",
     "images": [
@@ -282,8 +282,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 298000,
-        "comboPrice": 596000,
+        "price": 199000,
+        "comboPrice": 398000,
         "volume": "5ml",
         "saleType": "mini"
       }
@@ -294,8 +294,8 @@ const products = [
     "brand": "Yves Saint Laurent",
     "name": "Libre EDP Mini",
     "gender": "female",
-    "price": 478000,
-    "maxPrice": 478000,
+    "price": 279000,
+    "maxPrice": 279000,
     "volume": "7.5ml",
     "image": "assets/libre.webp",
     "images": [
@@ -304,8 +304,8 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 478000,
-        "comboPrice": 956000,
+        "price": 279000,
+        "comboPrice": 558000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
