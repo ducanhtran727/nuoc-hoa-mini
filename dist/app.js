@@ -4,192 +4,60 @@ let isSubmitting = false;
 
 const products = [
   {
-    "id": 0,
+    "id": 14,
     "brand": "Chanel",
-    "name": "Bleu de Chanel EDP Mini",
-    "gender": "male",
-    "price": 269000,
-    "maxPrice": 269000,
-    "volume": "10ml",
-    "image": "assets/bleu-de-chanel.webp",
-    "images": [
-      "assets/bleu-de-chanel.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 269000,
-        "comboPrice": 538000,
-        "volume": "10ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "brand": "Chanel",
-    "name": "Chance EDP Mini",
+    "name": "Chance Eau Fraîche EDT Mini",
     "gender": "female",
-    "price": 278000,
-    "maxPrice": 278000,
+    "price": 239000,
+    "maxPrice": 239000,
     "volume": "7.5ml",
-    "image": "assets/chance.webp",
+    "image": "assets/chance-eau-fraiche.png",
     "images": [
-      "assets/chance.webp"
+      "assets/chance-eau-fraiche.png"
     ],
     "inStock": true,
     "variants": [
       {
-        "price": 278000,
-        "comboPrice": 556000,
+        "price": 239000,
+        "comboPrice": 478000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
     ]
   },
   {
-    "id": 2,
+    "id": 15,
     "brand": "Chanel",
-    "name": "Coco Mademoiselle EDP Mini",
+    "name": "Chance Eau Tendre EDT Mini",
     "gender": "female",
-    "price": 260000,
-    "maxPrice": 260000,
+    "price": 239000,
+    "maxPrice": 239000,
     "volume": "7.5ml",
-    "image": "assets/coco-mademoiselle.webp",
+    "image": "assets/chance-eau-tendre.png",
     "images": [
-      "assets/coco-mademoiselle.webp"
+      "assets/chance-eau-tendre.png"
     ],
     "inStock": true,
     "variants": [
       {
-        "price": 260000,
-        "comboPrice": 520000,
+        "price": 239000,
+        "comboPrice": 478000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
     ]
   },
   {
-    "id": 3,
-    "brand": "Chanel",
-    "name": "N°5 EDP Mini",
-    "gender": "female",
-    "price": 240000,
-    "maxPrice": 240000,
-    "volume": "7.5ml",
-    "image": "assets/chanel-no5.webp",
-    "images": [
-      "assets/chanel-no5.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 240000,
-        "comboPrice": 480000,
-        "volume": "7.5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 4,
+    "id": 16,
     "brand": "Dior",
-    "name": "J’adore EDP Mini",
-    "gender": "female",
-    "price": 279000,
-    "maxPrice": 279000,
-    "volume": "5ml",
-    "image": "assets/jadore.webp",
-    "images": [
-      "assets/jadore.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 279000,
-        "comboPrice": 558000,
-        "volume": "5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "brand": "Dior",
-    "name": "Miss Dior EDP Mini",
-    "gender": "female",
-    "price": 265000,
-    "maxPrice": 265000,
-    "volume": "5ml",
-    "image": "assets/miss-dior.webp",
-    "images": [
-      "assets/miss-dior.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 265000,
-        "comboPrice": 530000,
-        "volume": "5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "brand": "Dior",
-    "name": "Sauvage EDP Mini",
-    "gender": "male",
-    "price": 259000,
-    "maxPrice": 259000,
-    "volume": "10ml",
-    "image": "assets/sauvage.webp",
-    "images": [
-      "assets/sauvage.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 259000,
-        "comboPrice": 518000,
-        "volume": "10ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "brand": "Giorgio Armani",
-    "name": "My Way EDP Mini",
-    "gender": "female",
-    "price": 240000,
-    "maxPrice": 240000,
-    "volume": "7ml",
-    "image": "assets/my-way.webp",
-    "images": [
-      "assets/my-way.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 240000,
-        "comboPrice": 480000,
-        "volume": "7ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "brand": "Gucci",
-    "name": "Bloom Acqua di Fiori EDP Mini",
+    "name": "Miss Dior Blooming Bouquet Mini",
     "gender": "female",
     "price": 239000,
     "maxPrice": 239000,
     "volume": "5ml",
-    "image": "assets/bloom-acqua.webp",
+    "image": "assets/miss-dior-blooming-bouquet.png",
     "images": [
-      "assets/bloom-acqua.webp"
+      "assets/miss-dior-blooming-bouquet.png"
     ],
     "inStock": true,
     "variants": [
@@ -202,110 +70,22 @@ const products = [
     ]
   },
   {
-    "id": 9,
-    "brand": "Gucci",
-    "name": "Bloom EDP Mini",
+    "id": 17,
+    "brand": "Chanel",
+    "name": "Chance EDP Mini (Vàng)",
     "gender": "female",
     "price": 239000,
     "maxPrice": 239000,
-    "volume": "5ml",
-    "image": "assets/bloom.webp",
+    "volume": "7.5ml",
+    "image": "assets/chance-edp.png",
     "images": [
-      "assets/bloom.webp"
+      "assets/chance-edp.png"
     ],
     "inStock": true,
     "variants": [
       {
         "price": 239000,
         "comboPrice": 478000,
-        "volume": "5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "brand": "Gucci",
-    "name": "Flora Gorgeous Jasmine EDP Mini",
-    "gender": "female",
-    "price": 269000,
-    "maxPrice": 269000,
-    "volume": "5ml",
-    "image": "assets/flora-jasmine.webp",
-    "images": [
-      "assets/flora-jasmine.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 269000,
-        "comboPrice": 538000,
-        "volume": "5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "brand": "Chanel",
-    "name": "Coco Noir EDP Mini",
-    "gender": "female",
-    "price": 240000,
-    "maxPrice": 240000,
-    "volume": "7.5ml",
-    "image": "assets/coco-noir.webp",
-    "images": [
-      "assets/coco-noir.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 240000,
-        "comboPrice": 480000,
-        "volume": "7.5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "brand": "Versace",
-    "name": "Bright Crystal EDT Mini",
-    "gender": "female",
-    "price": 199000,
-    "maxPrice": 199000,
-    "volume": "5ml",
-    "image": "assets/bright-crystal.webp",
-    "images": [
-      "assets/bright-crystal.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 199000,
-        "comboPrice": 398000,
-        "volume": "5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "brand": "Yves Saint Laurent",
-    "name": "Libre EDP Mini",
-    "gender": "female",
-    "price": 279000,
-    "maxPrice": 279000,
-    "volume": "7.5ml",
-    "image": "assets/libre.webp",
-    "images": [
-      "assets/libre.webp"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 279000,
-        "comboPrice": 558000,
         "volume": "7.5ml",
         "saleType": "mini"
       }
@@ -371,7 +151,7 @@ function updateDetailSize(size) {
   $('#detail-selected-size').textContent = 'Bạn đang chọn: ' + variant.volume;
   $('#detail-price').textContent = money(variant.price);
   $('#detail-sizes').innerHTML = sizeOptions(detailProduct, size, 'detail');
-  $('#detail-offer').innerHTML = `<span>1 chai ${money(variant.price)} + 22.000đ ship</span><span>2 chai ${money(variant.comboPrice)} · Miễn phí ship</span>`;
+  $('#detail-offer').innerHTML = `<span>1 chai ${money(variant.price)} + 21.000đ ship</span><span>2 chai ${money(variant.comboPrice)} · Miễn phí ship</span>`;
   $('#detail-buy').dataset.buySize = size;
 }
 function selectPurchaseSize(size) {
@@ -384,7 +164,7 @@ function selectPurchaseSize(size) {
   $('#purchase-sizes').innerHTML = sizeOptions(product, size, 'purchase');
   $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng</div><div class="offer-grid">${[1,2].map(q => {
     const price = quote(q);
-    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} chai</span><strong>${(price.subtotal / 1000).toLocaleString('vi-VN')}k</strong><small>${q === 1 ? '+22k ship' : 'Free ship'}</small></button>`;
+    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} chai</span><strong>${(price.subtotal / 1000).toLocaleString('vi-VN')}k</strong><small>${q === 1 ? '+21k ship' : 'Free ship'}</small></button>`;
   }).join('')}</div>`;
   updateTotal();
 }
@@ -397,7 +177,7 @@ function quote(quantity, product = selectedProduct) {
     throw new RangeError("Số lượng phải từ 1 đến 2.");
   if (!product || !product.inStock) throw new Error("Sản phẩm đã hết hàng.");
   const subtotal = Number(quantity) === 2 ? product.comboPrice : product.price;
-  const shipping = Number(quantity) === 1 ? 22000 : 0;
+  const shipping = Number(quantity) === 1 ? 21000 : 0;
   return { subtotal, shipping, total: subtotal + shipping };
 }
 function updateTotal() {
