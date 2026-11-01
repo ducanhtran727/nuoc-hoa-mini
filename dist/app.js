@@ -1,5 +1,5 @@
 // Dán URL Web App Google Apps Script (đuôi /exec) vào đây.
-const URLscript = 'https://script.google.com/macros/s/AKfycbz93Qui7gLMjYwA6vEFj0GH7iUwys_WoKrK7Lrqkjl2qI1Eq0N87dJ9_bWe9rZoi_IM/exec';
+const URLscript = 'https://script.google.com/macros/s/AKfycbz5xnx_V3dhHAFF9Ujw8Wdfh-JIDOJbHy2y3eg_N4LrU_69mr6piOg96KjvgBDXx2ZFzg/exec';
 let isSubmitting = false;
 
 const products = [
@@ -250,9 +250,13 @@ async function sendPurchase(payload) {
   try {
     const response = await fetch(URLscript, {
       method: "POST",
+      mode: "no-cors",
+      credentials: "omit",
       body: new URLSearchParams(payload),
       signal: controller.signal,
     });
+    // Opaque responses do not expose the server status or Sheet write result.
+    if (response.type === "opaque") return { confirmed: false };
     if (!response.ok)
       throw new Error(
         "Chưa gửi được thông tin. Vui lòng kiểm tra trước khi gửi lại.",
@@ -277,11 +281,16 @@ async function sendPurchase(payload) {
         "Cửa hàng chưa xác nhận đơn. Vui lòng kiểm tra trước khi gửi lại.",
       );
     }
+    return { confirmed: true };
   } finally {
     clearTimeout(timeout);
   }
 }
-function showOrderSuccess(payload, orderTotal) {
+function showOrderSuccess(payload, orderTotal, confirmed = true) {
+  $("#success-title").textContent = confirmed ? "Cảm ơn bạn đã đặt mua!" : "Đã gửi yêu cầu đặt mua";
+  $("#success-message").textContent = confirmed
+    ? "Cửa hàng đã tiếp nhận thông tin. Cửa hàng sẽ sớm liên hệ để xác nhận đơn hàng với bạn."
+    : "Yêu cầu đã được gửi đi, đang chờ cửa hàng kiểm tra và xác nhận qua điện thoại. Vui lòng chưa gửi lại để tránh trùng đơn.";
   $("#purchase").close();
   $("#success-phone").textContent = payload.phone;
   $("#success-product").textContent = payload.category;
@@ -337,12 +346,12 @@ $("#purchase-form").addEventListener("submit", async (e) => {
   submitButton.textContent = "Đang gửi...";
   $("#purchase-status").textContent = "Đang gửi thông tin mua hàng...";
   try {
-    await sendPurchase(payload);
-    if (typeof fbq === "function") fbq("track", "Purchase", {
+    const receipt = await sendPurchase(payload);
+    if (receipt.confirmed && typeof fbq === "function") fbq("track", "Purchase", {
       value: orderTotal,
       currency: "VND",
     });
-    showOrderSuccess(payload, orderTotal);
+    showOrderSuccess(payload, orderTotal, receipt.confirmed);
   } catch (error) {
     $("#purchase-status").textContent =
       error.name === "AbortError"
