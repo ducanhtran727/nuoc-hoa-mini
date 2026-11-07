@@ -9,7 +9,7 @@ const products = [
     "name": "TRUMP CARD – SEVEN LITTLE FORTUNES",
     "gender": "female",
     "price": 899000,
-    "originalPrice": 1600000,
+    "originalPrice": 1634545,
     "volume": "Set 7 chai mini",
     "image": "assets/seven-little-fortunes.png",
     "images": [
@@ -148,7 +148,7 @@ function purchasePayload(product, quantity, buyer) {
     address: buyer.address,
     quantity: String(quantity),
     category: product.name + " · " + product.volume,
-    note: product.price === Math.round(product.originalPrice * 55 / 100)
+    note: product.wheelRewardApplied
       ? ["Ưu đãi vòng quay giảm 45% · " + money(product.price) + "/set", buyer.note].filter(Boolean).join(" | ")
       : buyer.note,
     timestamp: new Date().toISOString(),

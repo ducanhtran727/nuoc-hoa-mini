@@ -17,6 +17,7 @@ let wheelSpinning = false;
 function showWheelReward(previouslyUsed) {
   const product = products[0];
   const price = Math.round(product.originalPrice * 55 / 100);
+  product.wheelRewardApplied = true;
   product.price = price;
   product.variants[0].price = price;
   selectPurchaseSize(product.variants[0].saleType);
