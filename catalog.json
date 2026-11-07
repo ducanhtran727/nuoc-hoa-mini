@@ -1,88 +1,24 @@
 [
   {
-    "id": 14,
-    "brand": "Chanel",
-    "name": "Chance Eau Fraîche EDT Mini",
+    "id": 18,
+    "brand": "Kiwwi",
+    "name": "TRUMP CARD – SEVEN LITTLE FORTUNES",
     "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "7.5ml",
-    "image": "assets/chance-eau-fraiche.png",
+    "price": 999000,
+    "originalPrice": 1600000,
+    "volume": "Set 7 chai mini",
+    "image": "assets/seven-little-fortunes.png",
     "images": [
-      "assets/chance-eau-fraiche.png"
+      "assets/seven-little-fortunes.png",
+      "assets/seven-little-fortunes-open.jpg",
+      "assets/seven-little-fortunes-detail.jpg",
+      "assets/seven-little-fortunes-box.jpg"
     ],
     "inStock": true,
     "variants": [
       {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "7.5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "brand": "Chanel",
-    "name": "Chance Eau Tendre EDT Mini",
-    "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "7.5ml",
-    "image": "assets/chance-eau-tendre.png",
-    "images": [
-      "assets/chance-eau-tendre.png"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "7.5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "brand": "Dior",
-    "name": "Miss Dior Blooming Bouquet Mini",
-    "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "5ml",
-    "image": "assets/miss-dior-blooming-bouquet.png",
-    "images": [
-      "assets/miss-dior-blooming-bouquet.png"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 17,
-    "brand": "Chanel",
-    "name": "Chance EDP Mini (Vàng)",
-    "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "7.5ml",
-    "image": "assets/chance-edp.png",
-    "images": [
-      "assets/chance-edp.png"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "7.5ml",
+        "price": 999000,
+        "volume": "Set 7 chai mini",
         "saleType": "mini"
       }
     ]

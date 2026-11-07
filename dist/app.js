@@ -4,89 +4,25 @@ let isSubmitting = false;
 
 const products = [
   {
-    "id": 14,
-    "brand": "Chanel",
-    "name": "Chance Eau Fraîche EDT Mini",
+    "id": 18,
+    "brand": "Kiwwi",
+    "name": "TRUMP CARD – SEVEN LITTLE FORTUNES",
     "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "7.5ml",
-    "image": "assets/chance-eau-fraiche.png",
+    "price": 999000,
+    "originalPrice": 1600000,
+    "volume": "Set 7 chai mini",
+    "image": "assets/seven-little-fortunes.png",
     "images": [
-      "assets/chance-eau-fraiche.png"
+      "assets/seven-little-fortunes.png",
+      "assets/seven-little-fortunes-open.jpg",
+      "assets/seven-little-fortunes-detail.jpg",
+      "assets/seven-little-fortunes-box.jpg"
     ],
     "inStock": true,
     "variants": [
       {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "7.5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "brand": "Chanel",
-    "name": "Chance Eau Tendre EDT Mini",
-    "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "7.5ml",
-    "image": "assets/chance-eau-tendre.png",
-    "images": [
-      "assets/chance-eau-tendre.png"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "7.5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "brand": "Dior",
-    "name": "Miss Dior Blooming Bouquet Mini",
-    "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "5ml",
-    "image": "assets/miss-dior-blooming-bouquet.png",
-    "images": [
-      "assets/miss-dior-blooming-bouquet.png"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "5ml",
-        "saleType": "mini"
-      }
-    ]
-  },
-  {
-    "id": 17,
-    "brand": "Chanel",
-    "name": "Chance EDP Mini (Vàng)",
-    "gender": "female",
-    "price": 239000,
-    "maxPrice": 239000,
-    "volume": "7.5ml",
-    "image": "assets/chance-edp.png",
-    "images": [
-      "assets/chance-edp.png"
-    ],
-    "inStock": true,
-    "variants": [
-      {
-        "price": 239000,
-        "comboPrice": 478000,
-        "volume": "7.5ml",
+        "price": 999000,
+        "volume": "Set 7 chai mini",
         "saleType": "mini"
       }
     ]
@@ -117,9 +53,9 @@ function render() {
       .slice(0, limit)
       .map(
         (p) => `<article class="product ${p.inStock ? "" : "sold-out"}">
-        <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="${p.image}" alt="${p.brand} ${p.name}" loading="lazy" decoding="async" width="960" height="960"></button>
-        <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${gender[p.gender]} · ${p.volume}</div>
-        <div class="prices price-range"><strong>${money(p.price)}</strong></div>
+        <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">Set 7 chai mini</span><img src="${p.image}" alt="${p.brand} ${p.name}" loading="lazy" decoding="async" width="960" height="960"></button>
+        <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${p.volume}</div>
+        <div class="prices price-range"><strong>${money(p.price)}/set</strong><del>${money(p.originalPrice)}</del></div>
         <button class="buy" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></article>`,
       )
       .join("") ||
@@ -139,7 +75,7 @@ function openDetail(id) {
   if (!detailProduct) return;
   detailSize = 'mini';
   const p = detailProduct;
-  $('#detail-content').innerHTML = `<div class="detail-gallery">${p.images.map((src,i) => `<figure><img src="${src}" alt="${p.brand} ${p.name} — ảnh ${i+1}" decoding="async"><figcaption>${p.volume}</figcaption></figure>`).join('')}</div><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]}</p><p id="detail-selected-size"></p><div class="prices"><strong id="detail-price"></strong></div><div id="detail-sizes"></div><p class="detail-offer" id="detail-offer"></p><button class="button" id="detail-buy" data-buy="${p.id}">Mua ngay ↗</button></div>`;
+  $('#detail-content').innerHTML = `<div class="detail-gallery">${p.images.map((src,i) => `<figure><img src="${src}" alt="${p.brand} ${p.name} — ảnh ${i+1}" decoding="async"><figcaption>${p.volume}</figcaption></figure>`).join('')}</div><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p id="detail-selected-size"></p><div class="prices"><strong id="detail-price"></strong></div><div id="detail-sizes"></div><p class="detail-offer" id="detail-offer"></p><button class="button" id="detail-buy" data-buy="${p.id}">Mua ngay ↗</button></div>`;
   updateDetailSize('mini');
   $('#detail').showModal();
   $('#detail').scrollTop = 0;
@@ -151,7 +87,7 @@ function updateDetailSize(size) {
   $('#detail-selected-size').textContent = 'Bạn đang chọn: ' + variant.volume;
   $('#detail-price').textContent = money(variant.price);
   $('#detail-sizes').innerHTML = sizeOptions(detailProduct, size, 'detail');
-  $('#detail-offer').innerHTML = `<span>1 chai ${money(variant.price)} + 21.000đ ship</span><span>2 chai ${money(variant.comboPrice)} · Miễn phí ship</span>`;
+  $('#detail-offer').innerHTML = `<span>Giá gốc <del>${money(detailProduct.originalPrice)}</del></span><span>1 set ${money(variant.price)} + 21.000đ ship</span><span>2 set ${money(variant.price * 2)} · Miễn phí ship</span>`;
   $('#detail-buy').dataset.buySize = size;
 }
 function selectPurchaseSize(size) {
@@ -160,11 +96,11 @@ function selectPurchaseSize(size) {
   if (!variant) return;
   selectedProduct = { ...product, ...variant };
   $('#purchase-name').textContent = product.name + ' · ' + variant.volume;
-  $('#purchase-price').textContent = money(variant.price);
+  $('#purchase-price').textContent = money(variant.price) + '/set';
   $('#purchase-sizes').innerHTML = sizeOptions(product, size, 'purchase');
   $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng</div><div class="offer-grid">${[1,2].map(q => {
     const price = quote(q);
-    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} chai</span><strong>${(price.subtotal / 1000).toLocaleString('vi-VN')}k</strong><small>${q === 1 ? '+21k ship' : 'Free ship'}</small></button>`;
+    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} set</span><strong>${(price.subtotal / 1000).toLocaleString('vi-VN')}k</strong><small>${q === 1 ? '+21k ship' : 'Free ship'}</small></button>`;
   }).join('')}</div>`;
   updateTotal();
 }
@@ -176,7 +112,7 @@ function quote(quantity, product = selectedProduct) {
   if (!validQuantity(quantity))
     throw new RangeError("Số lượng phải từ 1 đến 2.");
   if (!product || !product.inStock) throw new Error("Sản phẩm đã hết hàng.");
-  const subtotal = Number(quantity) === 2 ? product.comboPrice : product.price;
+  const subtotal = Number(quantity) * product.price;
   const shipping = Number(quantity) === 1 ? 21000 : 0;
   return { subtotal, shipping, total: subtotal + shipping };
 }
@@ -235,7 +171,7 @@ function purchasePayload(product, quantity, buyer) {
     phone: buyer.phone,
     address: buyer.address,
     quantity: String(quantity),
-    category: product.brand + " " + product.name + " · " + product.volume,
+    category: product.name + " · " + product.volume,
     note: buyer.note,
     timestamp: new Date().toISOString(),
   };
@@ -294,7 +230,7 @@ function showOrderSuccess(payload, orderTotal, confirmed = true) {
   $("#purchase").close();
   $("#success-phone").textContent = payload.phone;
   $("#success-product").textContent = payload.category;
-  $("#success-quantity").textContent = payload.quantity + " chai";
+  $("#success-quantity").textContent = payload.quantity + " set";
   $("#success-total").textContent = money(
     orderTotal,
   );
