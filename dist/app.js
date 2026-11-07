@@ -117,23 +117,22 @@ function updateTotal() {
   $("#quantity-minus").disabled = valid && Number(input.value) <= 1;
   $("#quantity-plus").disabled = valid && Number(input.value) >= 2;
 }
-function openPurchase(id, size = "mini") {
+function openPurchase(id, size = "mini", scrollToOrder = true) {
   if (isSubmitting) return;
   const product = products.find(p => p.id === id);
   if (!product || !product.inStock) return;
   if ($("#detail").open) $("#detail").close();
   selectedProduct = { ...product };
-  $("#purchase-form").reset();
-  $("#purchase-status").textContent = "";
   $("#purchase-image").src = product.images[0];
   $("#purchase-image").alt = product.brand + " " + product.name + " — ảnh 1";
   $("#purchase-image-second").hidden = true;
 
   $("#purchase-brand").textContent = product.brand;
   selectPurchaseSize(size);
-  $("#purchase").showModal();
-  $("#purchase").scrollTop = 0;
-  $("#buyer-name").focus();
+  if (scrollToOrder) {
+    $("#purchase").scrollIntoView({ behavior: "smooth" });
+    $("#buyer-name").focus({ preventScroll: true });
+  }
 }
 function stepQuantity(delta) {
   const input = $("#quantity");
@@ -204,7 +203,6 @@ function showOrderSuccess(payload, orderTotal, confirmed = true) {
   $("#success-message").textContent = confirmed
     ? "Cửa hàng đã tiếp nhận thông tin. Cửa hàng sẽ sớm liên hệ để xác nhận đơn hàng với bạn."
     : "Yêu cầu đã được gửi đi, đang chờ cửa hàng kiểm tra và xác nhận qua điện thoại. Vui lòng chưa gửi lại để tránh trùng đơn.";
-  $("#purchase").close();
   $("#success-phone").textContent = payload.phone;
   $("#success-product").textContent = payload.category;
   $("#success-quantity").textContent = payload.quantity + " set";
@@ -212,6 +210,7 @@ function showOrderSuccess(payload, orderTotal, confirmed = true) {
     orderTotal,
   );
   $("#purchase-form").reset();
+  updateTotal();
   $("#purchase-status").textContent = "";
   $("#order-success").showModal();
   $("#success-continue").focus();
@@ -304,10 +303,6 @@ document.addEventListener("click", (e) => {
   if (detail) openDetail(Number(detail.dataset.detail));
   const close = e.target.closest(".close");
   if (close) close.closest("dialog").close();
-  const guide = e.target.closest("[data-guide]");
-  if (guide) {
-    $("#collection").scrollIntoView({ behavior: "smooth" });
-  }
 });
 document.querySelectorAll("dialog").forEach((d) =>
   d.addEventListener("click", (e) => {
@@ -324,3 +319,4 @@ document.querySelectorAll("dialog").forEach((d) =>
   }),
 );
 render();
+openPurchase(products[0].id, "mini", false);

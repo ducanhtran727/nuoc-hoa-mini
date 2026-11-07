@@ -35,3 +35,27 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .gift-gallery-action{text-align:center;margin-top:24px}
 .gift-price>span{font-size:12px;color:var(--gold)}
 @media(max-width:560px){#products{grid-template-columns:1fr;gap:12px}}
+
+/* Product landing page */
+.landing-header{height:76px}
+.sales-landing{max-width:1100px;margin-inline:auto;padding:28px 24px 56px}
+.landing-hero{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.landing-cover{display:block;width:100%;height:auto}
+.landing-intro{padding:clamp(20px,4vw,46px)}
+.landing-intro h1{font-size:clamp(26px,3.4vw,45px);line-height:1.15;margin:12px 0}
+.landing-deal{display:grid;grid-template-columns:1fr 1.45fr;gap:12px;padding:14px 16px;background:#fff0f6;border-radius:10px}
+.landing-deal span,.landing-deal del{display:block}.landing-deal span{font-size:11px;color:var(--muted);margin-bottom:5px}
+.landing-deal strong{font-size:clamp(20px,3vw,34px);color:var(--gold);white-space:nowrap}
+.landing-deal small{font-size:12px}.landing-shipping{color:var(--gold);font-weight:600}
+.landing-intro .button{width:100%}
+.landing-gallery{padding:45px 0}.landing-section-title{text-align:center;margin-bottom:24px}.landing-section-title h2{margin:8px 0}
+#purchase.landing-order{width:min(100%,620px);margin-inline:auto;padding:clamp(20px,4vw,34px);border:1px solid var(--line);border-radius:18px;background:white;scroll-margin-top:20px}
+.landing-footer{padding:24px 6%}.landing-mobile-buy{display:none}
+@media(max-width:700px){
+  .sales-landing{padding:14px 12px 30px}.landing-hero{grid-template-columns:1fr}
+  .landing-header{height:66px}.landing-gallery{padding-block:32px}
+  body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+  .landing-mobile-buy{position:fixed;z-index:5;inset:auto 0 0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:white;border-top:1px solid var(--line);color:var(--gold);font-weight:700}
+  .landing-mobile-buy small{display:block;font-size:10px;margin-top:4px}
+  .landing-mobile-buy strong{background:var(--gold);color:white;border-radius:8px;padding:12px}
+}
