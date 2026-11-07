@@ -8,7 +8,7 @@ const products = [
     "brand": "Kiwwi",
     "name": "TRUMP CARD – SEVEN LITTLE FORTUNES",
     "gender": "female",
-    "price": 999000,
+    "price": 899000,
     "originalPrice": 1600000,
     "volume": "Set 7 chai mini",
     "image": "assets/seven-little-fortunes.png",
@@ -21,7 +21,7 @@ const products = [
     "inStock": true,
     "variants": [
       {
-        "price": 999000,
+        "price": 899000,
         "volume": "Set 7 chai mini",
         "saleType": "mini"
       }
@@ -30,37 +30,15 @@ const products = [
 ];
 const money = (n) => n.toLocaleString("vi-VN") + "₫";
 const $ = (s) => document.querySelector(s);
-const gender = { female: "Nữ", male: "Nam", unisex: "Unisex" };
-let filter = "all",
-  limit = 8,
-  selectedProduct = null;
+let selectedProduct = null;
 
 function render() {
-  let list = products.filter(
-    (p) =>
-      (filter === "all" || p.gender === filter) &&
-      (p.brand + " " + p.name)
-        .toLocaleLowerCase("vi")
-        .includes($("#search").value.trim().toLocaleLowerCase("vi")),
-  );
-  if ($("#sort").value !== "default")
-    list.sort((a, b) =>
-      $("#sort").value === "asc" ? a.price - b.price : b.price - a.price,
-    );
-  $("#result-count").textContent = list.length + " sản phẩm";
-  $("#products").innerHTML =
-    list
-      .slice(0, limit)
-      .map(
-        (p) => `<article class="product ${p.inStock ? "" : "sold-out"}">
-        <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">Set 7 chai mini</span><img src="${p.image}" alt="${p.brand} ${p.name}" loading="lazy" decoding="async" width="960" height="960"></button>
-        <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${p.volume}</div>
-        <div class="prices price-range"><strong>${money(p.price)}/set</strong><del>${money(p.originalPrice)}</del></div>
-        <button class="buy" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></article>`,
-      )
-      .join("") ||
-    '<p class="empty">Chưa tìm thấy mùi hương phù hợp. Thử tên khác nhé.</p>';
-  $("#more").hidden = list.length <= limit;
+  const product = products[0];
+  $("#products").innerHTML = product.images.map((src, index) =>
+    `<button type="button" class="product-image" data-detail="${product.id}" aria-label="Xem ảnh ${index + 1} của ${product.name}">
+      <img src="${src}" alt="${product.name} — ảnh ${index + 1}" loading="lazy" decoding="async">
+    </button>`
+  ).join("");
 }
 
 let detailProduct = null;
@@ -87,7 +65,7 @@ function updateDetailSize(size) {
   $('#detail-selected-size').textContent = 'Bạn đang chọn: ' + variant.volume;
   $('#detail-price').textContent = money(variant.price);
   $('#detail-sizes').innerHTML = sizeOptions(detailProduct, size, 'detail');
-  $('#detail-offer').innerHTML = `<span>Giá gốc <del>${money(detailProduct.originalPrice)}</del></span><span>1 set ${money(variant.price)} + 21.000đ ship</span><span>2 set ${money(variant.price * 2)} · Miễn phí ship</span>`;
+  $('#detail-offer').innerHTML = `<span>Giá gốc <del>${money(detailProduct.originalPrice)}</del></span><span>1 set ${money(variant.price)} · Miễn phí ship</span><span>2 set ${money(variant.price * 2)} · Miễn phí ship</span>`;
   $('#detail-buy').dataset.buySize = size;
 }
 function selectPurchaseSize(size) {
@@ -100,7 +78,7 @@ function selectPurchaseSize(size) {
   $('#purchase-sizes').innerHTML = sizeOptions(product, size, 'purchase');
   $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng</div><div class="offer-grid">${[1,2].map(q => {
     const price = quote(q);
-    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} set</span><strong>${(price.subtotal / 1000).toLocaleString('vi-VN')}k</strong><small>${q === 1 ? '+21k ship' : 'Free ship'}</small></button>`;
+    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} set</span><strong>${(price.subtotal / 1000).toLocaleString('vi-VN')}k</strong><small>Miễn phí ship</small></button>`;
   }).join('')}</div>`;
   updateTotal();
 }
@@ -113,8 +91,7 @@ function quote(quantity, product = selectedProduct) {
     throw new RangeError("Số lượng phải từ 1 đến 2.");
   if (!product || !product.inStock) throw new Error("Sản phẩm đã hết hàng.");
   const subtotal = Number(quantity) * product.price;
-  const shipping = Number(quantity) === 1 ? 21000 : 0;
-  return { subtotal, shipping, total: subtotal + shipping };
+  return { subtotal, shipping: 0, total: subtotal };
 }
 function updateTotal() {
   const input = $("#quantity");
@@ -329,30 +306,9 @@ document.addEventListener("click", (e) => {
   if (close) close.closest("dialog").close();
   const guide = e.target.closest("[data-guide]");
   if (guide) {
-    setFilter(guide.dataset.guide);
     $("#collection").scrollIntoView({ behavior: "smooth" });
   }
 });
-function setFilter(f) {
-  filter = f;
-  limit = 8;
-  document
-    .querySelectorAll("[data-filter]")
-    .forEach((b) => b.classList.toggle("active", b.dataset.filter === f));
-  render();
-}
-document
-  .querySelectorAll("[data-filter]")
-  .forEach((b) => (b.onclick = () => setFilter(b.dataset.filter)));
-$("#search").oninput = () => {
-  limit = 8;
-  render();
-};
-$("#sort").onchange = render;
-$("#more").onclick = () => {
-  limit += 8;
-  render();
-};
 document.querySelectorAll("dialog").forEach((d) =>
   d.addEventListener("click", (e) => {
     if (e.target === d) {

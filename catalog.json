@@ -4,7 +4,7 @@
     "brand": "Kiwwi",
     "name": "TRUMP CARD – SEVEN LITTLE FORTUNES",
     "gender": "female",
-    "price": 999000,
+    "price": 899000,
     "originalPrice": 1600000,
     "volume": "Set 7 chai mini",
     "image": "assets/seven-little-fortunes.png",
@@ -17,7 +17,7 @@
     "inStock": true,
     "variants": [
       {
-        "price": 999000,
+        "price": 899000,
         "volume": "Set 7 chai mini",
         "saleType": "mini"
       }
