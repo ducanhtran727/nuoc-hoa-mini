@@ -148,7 +148,9 @@ function purchasePayload(product, quantity, buyer) {
     address: buyer.address,
     quantity: String(quantity),
     category: product.name + " · " + product.volume,
-    note: buyer.note,
+    note: product.price === Math.round(product.originalPrice * 55 / 100)
+      ? ["Ưu đãi vòng quay giảm 45% · " + money(product.price) + "/set", buyer.note].filter(Boolean).join(" | ")
+      : buyer.note,
     timestamp: new Date().toISOString(),
   };
 }

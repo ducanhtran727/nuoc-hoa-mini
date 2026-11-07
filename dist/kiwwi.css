@@ -74,3 +74,5 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 #wheel-spin:disabled{cursor:default}
 #wheel-result{min-height:1.7em;margin:16px 0 8px;color:#87141c;font-weight:700}
 #wheel-claim[hidden]{display:none}
+.landing-deal strong [data-wheel-price]{display:inline;font-size:inherit;color:inherit;margin:0}
+.wheel-disc .wheel-miss{font-size:clamp(8px,2.5vw,12px);line-height:1.15}
