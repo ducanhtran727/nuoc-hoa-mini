@@ -59,3 +59,18 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   .landing-mobile-buy small{display:block;font-size:10px;margin-top:4px}
   .landing-mobile-buy strong{background:var(--gold);color:white;border-radius:8px;padding:12px}
 }
+
+.wheel-launch{margin-top:10px}
+#lucky-wheel{position:relative;width:min(94vw,440px);max-height:90dvh;padding:24px 20px;text-align:center;background:linear-gradient(#ffded4,#fff7ee);border-color:#e8a79b}
+#lucky-wheel .close{position:absolute;top:8px;right:12px}
+#lucky-wheel h2{margin:5px 24px 8px;color:#a61019;font:800 clamp(19px,5.5vw,28px)/1.2 system-ui,sans-serif;text-transform:uppercase}
+#wheel-description{margin:0 auto 20px;max-width:32ch}
+.wheel-stage{position:relative;width:min(100%,330px);aspect-ratio:1;margin:auto}
+.wheel-disc{position:absolute;inset:0;border:12px solid #a50714;border-radius:50%;outline:3px solid #eab849;box-shadow:0 4px 18px #53241144,inset 0 0 0 3px #ffd364;background:conic-gradient(from -30deg,#bd0813 0deg 60deg,#ffb431 60deg 120deg,#ff7c16 120deg 180deg,#bd0813 180deg 240deg,#ffb431 240deg 300deg,#ff7c16 300deg 360deg);transition:transform 0ms cubic-bezier(.15,.7,.14,1)}
+.wheel-disc span{position:absolute;inset:8% 0 auto;display:block;height:42%;transform-origin:center bottom;font:800 clamp(10px,3vw,16px) system-ui,sans-serif;color:white;text-shadow:0 1px 4px #481000}
+.wheel-disc span:nth-child(2){transform:rotate(60deg)}.wheel-disc span:nth-child(3){transform:rotate(120deg)}.wheel-disc span:nth-child(4){transform:rotate(180deg)}.wheel-disc span:nth-child(5){transform:rotate(240deg)}.wheel-disc span:nth-child(6){transform:rotate(300deg)}
+.wheel-pointer{position:absolute;z-index:1;left:50%;top:-8px;transform:translateX(-50%);width:24px;height:28px;background:#ffe48f;clip-path:polygon(0 0,100% 0,50% 100%)}
+#wheel-spin{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;border:3px solid #9d610a;background:radial-gradient(#fff8d1,#efbe4c);color:#801015;font-weight:800;box-shadow:0 2px 9px #59270b88}
+#wheel-spin:disabled{cursor:default}
+#wheel-result{min-height:1.7em;margin:16px 0 8px;color:#87141c;font-weight:700}
+#wheel-claim[hidden]{display:none}

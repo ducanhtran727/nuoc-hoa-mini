@@ -71,6 +71,7 @@
           </div>
           <p class="landing-shipping">Miễn phí vận chuyển</p>
           <a class="button" href="#purchase">Đặt hàng ngay ↗</a>
+          <button class="button secondary wheel-launch" type="button" id="wheel-launch">Thử vòng quay may mắn</button>
         </div>
       </section>
       <section id="collection" class="collection landing-gallery">
@@ -212,6 +213,21 @@
       <p>© 2026 Kiwwi</p>
     </footer>
     <a class="landing-mobile-buy" href="#purchase"><span>899.000đ/set<small>Miễn phí ship</small></span><strong>Đặt hàng ngay ↗</strong></a>
+    <dialog id="lucky-wheel" aria-labelledby="wheel-title" aria-describedby="wheel-description">
+      <button class="close" type="button" aria-label="Đóng vòng quay">×</button>
+      <h2 id="wheel-title">Vòng quay may mắn</h2>
+      <p id="wheel-description">Quay miễn phí để mở ưu đãi 899.000đ/set và miễn phí ship.</p>
+      <div class="wheel-stage">
+        <div class="wheel-pointer" aria-hidden="true"></div>
+        <div class="wheel-disc" id="wheel-disc" aria-hidden="true">
+          <span>899K</span><span>FREE SHIP</span><span>899K</span>
+          <span>FREE SHIP</span><span>899K</span><span>FREE SHIP</span>
+        </div>
+        <button id="wheel-spin" type="button" aria-label="Quay vòng may mắn">QUAY</button>
+      </div>
+      <p id="wheel-result" role="status"></p>
+      <a class="button" id="wheel-claim" href="#purchase" hidden>Đặt mua 899.000đ ↗</a>
+    </dialog>
     <dialog id="detail">
       <button class="close" aria-label="Đóng">×</button>
       <div id="detail-content"></div>
@@ -245,5 +261,6 @@
       </button>
     </dialog>
     <script src="app.js"></script>
+    <script src="wheel.js"></script>
   </body>
 </html>
